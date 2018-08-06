@@ -1,5 +1,12 @@
+// I wish I could add the api key as an environment var
+// on github pages so it's not out in the public...
 var apiKey = "GRjGH3yUlzmuAMXfS7vOP7HuluwPA9vc";
-var topics = [];
+var topics = ["doggies", "poly bridge"];
+
+/**
+ * Functions section
+ */
+
 
 /**
  * Retrieves 10 gifs of a given search term
@@ -26,7 +33,11 @@ function populateGifViewer(response) {
     response.data.forEach(renderGif);
 }
 
-function makeSearchButton() {
+/**
+ * Add a search term to our list of topics 
+ * and render search buttons.
+ */
+function addTopic() {
     var gifSearch = $("#search-field").val();
     var validInput = /\w/.test(gifSearch);
     
@@ -92,14 +103,21 @@ $("#search-field").keypress(function(event){
     var keycode = (event.keyCode ? event.keyCode : event.which);
     
     if(keycode == '13'){
-        makeSearchButton();  
+        addTopic();  
     }
 });
 
+// When a user clicks on the submit button
 $("#submit").click(function() {
-    makeSearchButton();
+    addTopic();
 });
 
+// Clear the gif viewer if you want
+$("#clear-gifs").click(function() {
+    $("#gif-viewer").empty();
+});
+
+// Search for gifs when a search button gets clicked
 $(document).on("click", ".search-button", function() {
     var searchTerm = $(this).text();
     
@@ -107,6 +125,7 @@ $(document).on("click", ".search-button", function() {
         .then(populateGifViewer);
 });
 
+// Play and pause gifs when you click on them
 $(document).on("click", ".gif-image", function() {
     var state = $(this).attr("data-state");
     if (state === "still") {
@@ -118,6 +137,7 @@ $(document).on("click", ".gif-image", function() {
     }
 });
 
+// Download gif when you click on the link
 $(document).on("click", ".download", function() {
     console.log("Hold on I need to implement downloads!");
 });
