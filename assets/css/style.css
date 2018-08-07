@@ -1,11 +1,56 @@
 body {
+    background-image: url(https://i1.wp.com/trippy.me/wp-content/uploads/trippy-space-phone-bg.jpg?&ssl=1);
+    background-size: cover;
     display: flex;
     flex-direction: column;
 }
 
+.container {
+    opacity: .9;
+}
+
 header {
+    color: white;
     display: flex;
     justify-content: center;
+}
+
+#buttons-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+#buttons-row > span {
+    margin-left: .5em;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.search-button {
+    margin-left: .5em;
+    margin-bottom: .5em;
+}
+
+#search-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+}
+
+#search-field {
+    width: 35%;
+    margin-left: .5em;
+    margin-right: 3em;
+}
+
+#submit,
+#clear-gifs {
+    margin-left: 2em;
 }
 
 #gif-viewer {

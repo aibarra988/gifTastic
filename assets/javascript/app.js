@@ -52,7 +52,7 @@ function renderTopics() {
     $("#buttons").empty();
     topics.forEach(function(topic) {
         var newBtn = $("<button>")
-            .attr("class", "search-button")
+            .attr("class", "search-button btn btn-primary")
             .text(topic);
         
         $("#buttons").prepend(newBtn);
