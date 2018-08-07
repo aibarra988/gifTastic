@@ -52,18 +52,19 @@ function renderTopics() {
     $("#buttons").empty();
     topics.forEach(function(topic) {
         var newBtn = $("<button>")
-        .attr("class", "search-button")
-        .text(topic);
+            .attr("class", "search-button")
+            .text(topic);
         
         $("#buttons").prepend(newBtn);
     });
 }
 
 function renderGif(gif) {
-    var gifDiv = $("<div>");
-    
+    var gifDiv = $("<div>")
+        .attr("class", "thumbnail");
+        
     var gifImg = $("<img>")
-        .attr("class", "thumbnail gif-image")
+        .attr("class", "gif-image")
         .attr("data-still", gif.images.fixed_width_still.url)
         .attr("data-animate", gif.images.fixed_width.url)
         .attr("data-state", "still")
@@ -72,12 +73,13 @@ function renderGif(gif) {
     gifDiv.append(gifImg);
 
     var gifRating = $("<span>")
-        .text("Rated: ", gif.rating.toUpperCase());
+        .text("Rated: " + gif.rating.toUpperCase());
     
     gifDiv.append(gifRating);
 
     var downloadLink = $("<a>")
-        .attr("class", "download")
+        .attr("href", gif.images.fixed_width_still.url)
+        .attr("download", "")
         .text("Download ");
     var fontAwesomeCloud = $("<i>")
         .attr("class", "fas fa-cloud-download-alt");

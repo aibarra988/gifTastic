@@ -13,13 +13,26 @@
     <title>gifTastic</title>
 </head>
 <body>
-    <div id="buttons"></div>
+    <header>
+        <h1>gifTastic</h1>
+    </header>
 
-    <input id="search-field" type="text" placeholder="Enter a gif search">
-    <button id="submit" type="submit">gif me up!</button>
-    <button id="clear-gifs">Clear Gif Screen</button>
-
-    <div id="gif-viewer"></div>
+    <div class="container jumbotron">
+        <div id="buttons-row" class="row">
+            <div class="col-sm">
+                <div id="buttons"></div>
+                <input id="search-field" type="text" placeholder="Enter a gif search">
+            </div>
+            <button id="submit" type="submit">gif me up!</button>
+            <button id="clear-gifs">Clear Gif Screen</button>
+        </div>
+    
+        <div class="row">
+            <div class="col-sm">
+                <div id="gif-viewer"></div>
+            </div>
+        </div>
+    </div>
     <script src="assets/javascript/app.js"></script>
 </body>
 </html>

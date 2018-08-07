@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+#gif-viewer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.thumbnail {
+    display: flex;
+    flex-direction: column;
+}
+
+.gif-image {
+    max-width: 200px;
+}
