@@ -45,12 +45,12 @@ header {
 #search-field {
     width: 35%;
     margin-left: .5em;
-    margin-right: 3em;
+    margin-right: 2em;
 }
 
 #submit,
 #clear-gifs {
-    margin-left: 2em;
+    margin-left: 1em;
 }
 
 #gif-viewer {
