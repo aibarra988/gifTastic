@@ -48,6 +48,11 @@ header {
     /* margin-right: 1em; */
 }
 
+#search-field-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
 #submit,
 #clear-gifs {
     /* margin-left: 1em; */
